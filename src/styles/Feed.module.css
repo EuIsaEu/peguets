@@ -1,0 +1,19 @@
+#feed{
+    width: 96%;
+    padding: 5% 2%;
+    min-height: 80vw;
+    background-color: #4e326b;
+    display: flex;
+    align-items: center;
+}
+
+#main{
+    width: 100%;
+}
+
+#publicacao{
+    width: 90%;
+    height: 60vw;
+    border-radius: 25px;
+    background-color: #715f85;
+}

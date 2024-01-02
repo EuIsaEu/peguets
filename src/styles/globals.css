@@ -1,4 +1,31 @@
-:root {
+:root{
+  /* --var-roxo: #7556e3; */
+  --var-roxo: #4d3a91;
+  --var-roxo-sombra: #0f0538;
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+}
+
+*{
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+.fadeIn {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -104,4 +131,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */

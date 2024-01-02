@@ -1,0 +1,68 @@
+#header{
+    width: 100%;
+    height: 14vw;
+    background-color: #0f053869;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+#header h1{
+    font-size: 5vw;
+    color: white;
+    margin-left: 1vw;
+}
+#header nav{
+    min-width: 55vw;
+    min-height: 6vw;
+    padding: 1.1vw 2.5vw;
+    gap: 5vw;
+    border-radius: 20vw;
+    margin-right: 3vw;
+    display: flex;
+    align-items: center;
+    background-color: #7556e3a6;
+    border: 0.3vw solid #bcb4d9;
+    
+}
+#header a{
+    font-size: 4vw;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 300ms ease-in;
+}
+#header a:hover{
+    opacity: 0.7;
+}
+
+#logoDiv{
+    width: 30%;
+    margin-left: 3vw;
+    display: flex;
+    align-items: center;
+}
+
+#icon{
+    width: 7vw;
+    height: 7vw;
+    margin-right: 0;
+}
+
+#deslogar{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border: 0;
+    padding: 0;
+    font-size: 4vw;
+    font-weight: 800;
+    border-radius: 25px;
+    outline: none;
+    color: white;
+    border-color: transparent;
+    background-color: transparent;
+    transition: color 500ms ease-in;
+}
+#deslogar:hover{
+    cursor: pointer;
+}
