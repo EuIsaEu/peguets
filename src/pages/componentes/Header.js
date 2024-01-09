@@ -35,14 +35,13 @@ export default function Header() {
             <nav>
                 {usuario ? (
                     <>
-                        <a href='feed'>feed</a>
-                        <a href='login'>login</a>
+                        <a href='/feed'>feed</a>
                         <button id={styles.deslogar} onClick={logout}>deslogar</button>
                     </>
                 ) : (
                     <>
-                        <a href='login'>login</a>
-                        <a href='registro'>cadastro</a>
+                        <a href='/login'>login</a>
+                        <a href='/registro'>cadastro</a>
                     </>
                 )}
             </nav>

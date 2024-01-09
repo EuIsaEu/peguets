@@ -10,6 +10,10 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.cropper-container * {
+  margin: 0;
+}
+
 .fadeIn {
   animation: fadeIn 3s;
 }
