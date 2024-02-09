@@ -52,6 +52,8 @@ export default function Registro() {
                     }
                 })
 
+            }else{
+                alert("verifica essa senha com menos de 8 caracteres ai")
             }
         }
 
