@@ -37,12 +37,12 @@ export default function Registro() {
                         //colocar o redirecionamento dentro do .then do set(), já que é preciso esperar
                         const userObjLocal = {
                             nome: nome,
-                            userId: user.uid
+                            userId: userCredential.user.uid
                         }
 
                         localStorage.setItem("user-info", JSON.stringify(userObjLocal))
                         localStorage.setItem("user-credentials", JSON.stringify(userCredential.user))
-                        window.location.href = '/feed'
+                        window.location.href = '/profile'
                     })
 
                 }).catch((error) => {

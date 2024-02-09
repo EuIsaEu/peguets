@@ -31,12 +31,12 @@ export default function Registro() {
                                 nome: data.nome,
                                 profilePicURL: data.profilePicURL,
                                 recado: data.recado,
-                                userId: user.uid
+                                userId: userCredential.user.uid
                             }
 
                             localStorage.setItem("user-info", JSON.stringify(userObj))
                             localStorage.setItem("user-credentials", JSON.stringify(userCredential.user))
-                            window.location.href = '/feed'
+                            window.location.href = '/profile'
                         }
                     })
                 }).catch((error) => {

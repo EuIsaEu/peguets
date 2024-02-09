@@ -1,4 +1,4 @@
-#feed{
+#feed {
     width: 96%;
     padding: 5% 2%;
     min-height: 80vw;
@@ -7,13 +7,19 @@
     align-items: center;
 }
 
-#main{
+#main {
     width: 100%;
 }
 
-#publicacao{
+#publicacao {
     width: 90%;
     height: 60vw;
     border-radius: 25px;
     background-color: #715f85;
+    text-align: center;
+}
+
+#publicacao a {
+    font-size: 5vw;
+    color: white;
 }
