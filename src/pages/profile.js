@@ -136,7 +136,7 @@ export default function profile() {
                             {/* <h3 id={styles.profileRecado} ref={recadoRef}>Olá! +insira o nome registrado+! Meus amigos me chamam de RONB1NT5CAT5CO, e carregar essa página utilizou <b>0,5 WATTS</b> da sua bateria! °-°</h3> */}
                             <div id={styles.profileNumbers}>
                                 <div className={styles.numbers}>
-                                    <h4>Numero</h4>
+                                    <h4>Peguets</h4>
                                     <p>{userObj.peguets}</p>
                                 </div>
                                 <div className={styles.numbers}>
