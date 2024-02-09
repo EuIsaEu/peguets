@@ -19,6 +19,7 @@ export default function Header() {
     const logout = () => {
         signOut(auth)
             .then(() => {
+                // localStorage.setItem("user-credentials")
                 console.log('Deslogado');
             })
             .catch((error) => {

@@ -66,3 +66,220 @@
 #deslogar:hover{
     cursor: pointer;
 }
+
+/*------------- CROP IMAGE --------------- */
+
+#bgBlack{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    z-index: 1;
+    position: fixed;
+    background-color: black;
+}
+
+#cropImage{
+    opacity: 1;
+    transition: opacity 100ms ease-in-out;
+}
+
+#cropDiv{
+    width: 80%;
+    min-height: 40vw;
+    margin: 0 5% 0 5%;
+    padding: 4vw 5%;
+    border-radius: 3vw;
+    top: 65vw;
+    opacity: 1;
+    z-index: 4;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--var-roxo);
+}
+
+#loadingBg{
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.7;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    display: none;
+    align-items: center;
+    position: absolute;
+    background-color: var(--var-roxo-sombra);
+}
+#loadingBg p{
+    color: white;
+    font-size: 3.5vw;
+    font-weight: 300;
+    z-index: 13;
+}
+
+#loadingBgCanvas{
+    width: 20%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background: linear-gradient(to right, var(--var-roxo-sombra), var(--var-laranja), var(--var-roxo-sombra));
+    animation: loadingCanvas 1s linear infinite;
+}
+
+#selImgPanel{
+    width: 100%;
+    height: 10vw;
+    margin-bottom: 2vw;
+    display: flex;
+    align-items: center;
+}
+
+#exitIcon{
+    width: 10vw;
+    height: 10vw;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+#labelSelImg{
+    width: auto;
+    height: 4vw;
+    margin-left: 0;
+    padding: 2% 4%;
+    border-radius: 2vw;
+    font-size: 3.5vw;
+    font-weight: 600;
+    color: #ed56b3;
+    background-color: white;
+}
+#buttonSelImg[type="file"]{
+    display: none;
+}
+
+#canvasPanel{
+    width: 100%;
+    height: auto;
+    display: flex;
+
+}
+
+#rangeSide{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#rangeSide img{
+    width: 8vw;
+    height: 8vw;
+}
+#rangeSide input[type="range"]{
+    writing-mode: vertical-lr;
+    width: 6vw;
+    height: 40vw;
+    padding: 0 5px;
+}
+
+#canvasDiv{
+    width: 100%;
+    margin-top: 3vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#canvasDiv h3{
+    font-size: 4.5vw;
+    color: white;
+}
+
+#downloadButton{
+    width: auto;
+    height: auto;
+    margin-top: 3vw;
+    font-size: 3.5vw;
+    padding: 1vw 2vw;
+    border-radius: 1.5vw;
+    font-weight: 500;
+    background-color: #ed56b3;
+    color: white;
+    border-color: transparent;
+}
+
+#updateRecado{
+    width: 80%;
+    min-height: 30vw;
+    margin: 0 5% 0 5%;
+    padding: 4vw 5%;
+    border-radius: 3vw;
+    top: 50vw;
+    opacity: 1;
+    z-index: 4;
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--var-roxo);
+    transition: opacity 100ms ease-in;
+}
+
+#recadoTextArea{
+    width: 96%;
+    height: 12vw;
+    padding: 2vw 2%;
+    margin-bottom: 3vw;
+    font-size: 3vw;
+    text-align: center;
+    border: none;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    color: white;
+    border-bottom: 1px solid var(--var-rosa);
+    background-color: var(--var-roxo);
+    transition: background-color 200ms ease-in-out;
+}
+#recadoTextArea:focus-visible{
+    background-color: #0f053869;
+}
+
+#recadoButtonEnviar{
+    width: auto;
+    height: auto;
+    font-size: 3.5vw;
+    border-color: transparent;
+    color: white;
+    background-color: var(--var-rosa);
+}
+#recadoButtonEnviar:active{
+    mix-blend-mode: luminosity;
+}
+
+#recadoLimite{
+    font-size: 3vw;
+    margin-top: 2vw;
+    color: #ff3333;
+    text-align: center;
+}
+
+#recadoVazio{
+    font-size: 3vw;
+    margin-top: 2vw;
+    color: #ff3333;
+    text-align: center;
+}
+
+@keyframes loadingCanvas {
+    1%{
+        left: -40vw;
+    }
+    100%{
+        left: 100vw;
+    }
+}
+

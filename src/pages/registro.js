@@ -4,7 +4,7 @@ import styles from '@/styles/Registro.module.css'
 
 import { getDatabase, ref, set, get } from "firebase/database";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./api/firebase"
+import { auth, database } from "./api/firebase"
 import { app } from "./api/firebase"
 
 export default function Registro() {
@@ -18,24 +18,35 @@ export default function Registro() {
             const nome = nomeRef.current.value;
             const email = emailRef.current.value;
             const password = passwordRef.current.value;
-            const db = getDatabase(app)
 
             if (email != null && nome != null && password != null && password.length > 8) {
                 await createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
 
-                    set(ref(db, 'peguets/UsersAuthList/' + userCredential.user.uid), {
+                    const userDbRef = ref(database, 'peguets/UsersAuthList/' + userCredential.user.uid);
+                    const userObj = {
                         nome: nome,
-                    }).then(() => {
+                        profilePicURL: "https://firebasestorage.googleapis.com/v0/b/sage-duck.appspot.com/o/peguets%2FusersProfilePics%2Fprofile-icon.png?alt=media&token=592cc04a-da1a-4338-a9a6-14c2c239972b",
+                        recado: "Olá! +insira o nome registrado+! Meus amigos me chamam de RONB1NT5CAT5CO, e carregar essa página utilizou <b>0,5 WATTS</b> da sua bateria! °-°",
+                        peguets: 0,
+                        karma: 0,
+                        nota: 0,
+                        postagens: 0
+                    }
+
+                    set(userDbRef, userObj).then(() => {
                         //colocar o redirecionamento dentro do .then do set(), já que é preciso esperar
-                            localStorage.setItem("user-info", JSON.stringify({
-                                nome: nome,
-                            }))
-                            localStorage.setItem("user-credentials", JSON.stringify(userCredential.user))
-                            window.location.href = '/feed'
-                        })
-                        
+                        const userObjLocal = {
+                            nome: nome,
+                            userId: user.uid
+                        }
+
+                        localStorage.setItem("user-info", JSON.stringify(userObjLocal))
+                        localStorage.setItem("user-credentials", JSON.stringify(userCredential.user))
+                        window.location.href = '/feed'
+                    })
+
                 }).catch((error) => {
-                    console.log(error)
+                    console.error("Erro: ", error)
                     if (error.code === "auth/invalid-email") {
                         alert("O endereço de e-mail fornecido é inválido.");
                     }

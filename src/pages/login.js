@@ -21,21 +21,26 @@ export default function Registro() {
             if (email != null && password != null) {
                 await signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
                     console.log(userCredential.user.uid)
-                    get(ref(db, 'peguets/UsersAuthList/' + userCredential.user.uid))
-                        .then((snapshot) => {
-                            console.log(snapshot.val())
-                            if (snapshot.exists && snapshot.val() != null) {
-                                console.log(snapshot.val())
-                                localStorage.setItem("user-info", JSON.stringify({
-                                    nome: snapshot.val().nome,
-                                }))
-                                localStorage.setItem("user-credentials", JSON.stringify(userCredential.user))
-                                window.location.href = '/feed'
+                    const userDbRef = ref(db, 'peguets/UsersAuthList/' + userCredential.user.uid);
+
+                    get(userDbRef).then((snapshot) => {
+                        if (snapshot.exists) {
+                            var data = snapshot.val()
+
+                            const userObj = {
+                                nome: data.nome,
+                                profilePicURL: data.profilePicURL,
+                                recado: data.recado,
+                                userId: user.uid
                             }
-                        })
+
+                            localStorage.setItem("user-info", JSON.stringify(userObj))
+                            localStorage.setItem("user-credentials", JSON.stringify(userCredential.user))
+                            window.location.href = '/feed'
+                        }
+                    })
                 }).catch((error) => {
-                    alert(error)
-                    console.log(error)
+                    console.log("Erro: ", error)
                 })
             }
         }

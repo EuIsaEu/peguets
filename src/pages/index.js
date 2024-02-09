@@ -73,7 +73,7 @@ export default function Home() {
             <h3 id={styles.sobreFrase}>O MELHOR SITE DO MUNDO</h3>
           </div>
           <h1>sobre</h1>
-          <p><b>Peguets</b> é um site de relacionamento... de 3 pessoas... <b>e só delas 🙌✨</b></p>
+          <p><b>Peguets</b> é um site de relacionamento de trouxas... <b>e só deles 🙌✨</b></p>
           <a href='login'>Faz login logo 💜🤫</a>
         </div>
         <div id={styles.nos}>

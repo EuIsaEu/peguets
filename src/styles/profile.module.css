@@ -1,0 +1,277 @@
+#profileLoading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--var-roxo);
+    transition: opacity 500ms ease-in-out;
+}
+
+#loadingImg {
+    width: 25vw;
+    animation: loadingImg 1s linear infinite;
+}
+
+#logout{
+    width: 90%;
+    height: 100vh;
+    padding: 0 5%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--var-roxo-sombra);
+    color: white;
+}
+#logout h1{
+    font-size: 7vw;
+    color: var(--var-rosa);
+}
+#logout p{
+    font-size: 3vw;
+}
+#logout a{
+    color: var(--var-rosa);
+    font-weight: 600;
+    text-decoration: none;
+}
+#logoutImg{
+    width: 10vw;
+    margin-top: 5vw;
+    mix-blend-mode: overlay;
+}
+
+#profile {
+    width: 100%;
+    min-height: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#profileInfos {
+    width: 100%;
+    height: auto;
+    padding: 5vw 0 0 0;
+    background-color: var(--var-roxo);
+    /* background-color: #332d67; */
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#profileNome {
+    font-size: 7vw;
+    margin-bottom: 2vw;
+}
+
+#profileRecado {
+    width: 60%;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    font-weight: 400;
+    text-align: center;
+}
+
+#mudarRecadoButton {
+    width: auto;
+    height: auto;
+    font-size: 3.5vw;
+    border-color: transparent;
+    color: white;
+    background-color: var(--var-rosa);
+}
+
+#profileIcon {
+    width: 40vw;
+    height: 40vw;
+    margin-bottom: 2vw;
+    border-radius: 100%;
+    opacity: 1;
+    border: 5px solid var(--var-rosa);
+}
+
+#pfpDiv {
+    position: relative;
+}
+
+#pfpDiv label {
+    width: auto;
+    height: auto;
+    position: absolute;
+    bottom: 3vw;
+    right: 3vw;
+}
+
+#pfpDiv label img {
+    width: 7vw;
+    height: 7vw;
+    border: 3px solid var(--var-rosa);
+    border-radius: 100%;
+    cursor: pointer;
+    background: none;
+}
+
+#pfpDiv label img:active {
+    opacity: 0.9;
+}
+
+#updatePfp {
+    display: none;
+}
+
+#profileNumbers {
+    width: 94%;
+    height: 18vw;
+    padding: 0 3%;
+    display: flex;
+    align-items: center;
+}
+
+#postagens {
+    width: 94%;
+    min-height: 95vw;
+    padding: 8vw 3%;
+    background-color: var(--var-roxo-sombra);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#criarPost {
+    width: 85vw;
+    height: 20vw;
+    border-radius: 1vw;
+    margin-bottom: 6vw;
+    display: flex;
+    align-items: center;
+    border: 0.2vw solid white;
+    background-color: #332d67;
+}
+
+#criarPostButton{
+    width: auto;
+    height: auto;
+    font-size: 4vw;
+    font-weight: 600;
+    padding: 1vw 2vw;
+    border-radius: 2vw;
+    border: none;
+    background-color: var(--var-rosa);
+    color: white;
+    
+}
+
+#noPost {
+    width: 85vw;
+    height: 96vw;
+    border-radius: 3vw;
+    margin-bottom: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #332d67;
+    border: 0.3vw solid white;
+}
+
+#noPost img {
+    width: 20vw;
+    height: 20vw;
+}
+
+#noPostText {
+    font-size: 6vw;
+    margin-top: 3vw;
+    color: white;
+}
+
+.numbers {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: white; */
+}
+
+.numbers h4 {
+    font-size: 4vw;
+}
+
+.numbers p {
+    font-size: 3vw;
+}
+
+.post {
+    width: 85vw;
+    height: 96vw;
+    border-radius: 3vw;
+    margin-bottom: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #332d67;
+    border: 0.3vw solid white;
+}
+
+.postImg {
+    width: 85vw;
+    height: 85vw;
+}
+
+.postReactions {
+    width: 100%;
+    height: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    width: 8vw;
+}
+
+.postButtons {
+    width: 30%;
+    height: auto;
+    margin-left: 4vw;
+    gap: 1vw;
+    display: flex;
+    align-items: center;
+}
+
+.peguetLevel {
+    font-size: 4vw;
+    color: white;
+}
+
+.autorPost{
+    font-size: 3.5vw;
+    opacity: 0.5;
+    margin-right: 7vw;
+    color: white;
+}
+
+@keyframes loadingImg {
+    1%{
+        transform: rotate(0deg);
+    }
+    50%{
+        opacity: 0.6;
+        width: 15vw;
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
